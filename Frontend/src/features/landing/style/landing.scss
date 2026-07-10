@@ -1,0 +1,305 @@
+.landing-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+// ── Nav ────────────────────────────────────────────────────────────────────
+.landing-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 1.25rem 2rem 1.25rem 4.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.landing-nav__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+.landing-nav__mark {
+    width: 2.1rem;
+    height: 2.1rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.6rem;
+    background: var(--accent);
+    color: white;
+    font-weight: 800;
+}
+
+.landing-nav__name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.landing-nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.landing-nav__link {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--accent);
+    }
+}
+
+// ── Hero ───────────────────────────────────────────────────────────────────
+.landing-hero {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 5rem;
+    text-align: center;
+}
+
+.landing-hero__glow {
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 640px;
+    height: 640px;
+    max-width: 90vw;
+    background: radial-gradient(circle, var(--accent-soft) 0%, transparent 65%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.landing-hero__eyebrow {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.landing-hero__title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+}
+
+.landing-hero__subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    max-width: 620px;
+    margin: 0 auto 2.25rem;
+}
+
+.landing-hero__ctas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.landing-hero__cta {
+    padding-inline: 2rem;
+}
+
+// ── Section title (shared) ───────────────────────────────────────────────────
+.landing-section-title {
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+}
+
+// ── How it works ────────────────────────────────────────────────────────────
+.landing-steps {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.landing-steps__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.landing-step {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--surface);
+}
+
+.landing-step__number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+}
+
+.landing-step__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.landing-step__description {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+// ── Features ─────────────────────────────────────────────────────────────────
+.landing-features {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.landing-features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.landing-feature-card {
+    padding: 1.75rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--surface);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 40px var(--shadow);
+    }
+}
+
+.landing-feature-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.7rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+}
+
+.landing-feature-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.landing-feature-card__description {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+// ── Why Prepora (differentiators) ────────────────────────────────────────────
+.landing-diff {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.landing-diff__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.landing-diff-card {
+    padding: 1.75rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: linear-gradient(160deg, var(--accent-soft), transparent 70%), var(--surface);
+}
+
+.landing-diff-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.7rem;
+    background: var(--surface-strong);
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+}
+
+.landing-diff-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.landing-diff-card__description {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+// ── Final CTA ─────────────────────────────────────────────────────────────────
+.landing-final-cta {
+    max-width: 700px;
+    margin: 2rem auto 0;
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+
+    h2 {
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+        font-weight: 800;
+        margin-bottom: 0.6rem;
+    }
+
+    p {
+        color: var(--text-muted);
+        margin-bottom: 1.75rem;
+    }
+}
+
+.landing-final-cta__button {
+    padding-inline: 2.25rem;
+}
+
+// ── Footer ───────────────────────────────────────────────────────────────────
+.landing-footer {
+    text-align: center;
+    padding: 2rem 1.5rem 2.5rem;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+@media (max-width: 560px) {
+    .landing-nav {
+        padding: 1rem 1rem 1rem 3.75rem;
+    }
+
+    .landing-nav__actions {
+        gap: 0.6rem;
+    }
+}

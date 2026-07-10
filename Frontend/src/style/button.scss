@@ -1,0 +1,41 @@
+.button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font: inherit;
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+
+    &.primary-button{
+        background-color: #e1034d;
+        color: white;
+    }
+
+    &.secondary-button{
+        background-color: transparent;
+        color: #e1034d;
+        border: 1px solid #e1034d;
+    }
+
+    &:disabled{
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    &:hover{
+        text-decoration: none;
+    }
+
+    &:active{
+        transform: scale(0.9);
+    }
+}
